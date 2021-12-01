@@ -1,0 +1,43 @@
+.react-skeleton {
+  overflow: hidden;
+  background-color: rgb(241, 239, 239) !important;
+  color: rgb(241, 239, 239) !important;
+}
+.react-skeleton2 {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  min-height: 20px;
+  min-width: 20px;
+  background-color: rgb(235, 231, 231) !important;
+  border-radius: 3px;
+  color: rgb(235, 231, 231) !important;
+  font-size: 5px;
+  &::after {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    width: 80%;
+    height: 100%;
+    background: linear-gradient(
+        to left,
+        rgb(235, 231, 231),
+        #fff,
+        rgb(235, 231, 231)
+      )
+      0 0 no-repeat;
+    content: '';
+    animation: shineMove 2s infinite;
+    transform: skewX(-45deg);
+    opacity: 0.2;
+  }
+}
+@keyframes shineMove {
+  0% {
+    left: -200%;
+  }
+  100% {
+    left: 200%;
+  }
+}
