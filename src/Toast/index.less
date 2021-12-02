@@ -1,0 +1,171 @@
+.obiusm-toast-wrapper {
+  position: fixed;
+  z-index: 99999;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0);
+  transform: translate3d(0, 0, 3px);
+  .obiusm-toast-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 19px;
+    padding: 4px 8px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+    color: #fff;
+  }
+  @keyframes loading {
+    from {
+      width: 15px;
+      height: 15px;
+      background: #ffffff;
+      opacity: 1;
+    }
+    to {
+      width: 10px;
+      height: 10px;
+      opacity: 0.25;
+    }
+  }
+  .obiusm-toast-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 94px;
+    min-height: 94px;
+    padding: 19px 0 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+    color: #fff;
+    box-sizing: border-box;
+    .obiusm-toast-spinner {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      zoom: 0.3;
+      div {
+        position: absolute;
+        left: 42%;
+        top: 42%;
+        width: 34px;
+        height: 34px;
+        background: #a4a2a4;
+        border: 1px solid #fff;
+        border-radius: 40px;
+        animation: loading 1s linear infinite;
+        opacity: 0;
+      }
+      .obiusm-toast-spinner-bar1 {
+        transform: rotate(0deg) translate(0, -34px);
+        animation-delay: -0s;
+      }
+      .obiusm-toast-spinner-bar2 {
+        transform: rotate(30deg) translate(0, -34px);
+        animation-delay: -1.8334s;
+      }
+      .obiusm-toast-spinner-bar3 {
+        transform: rotate(60deg) translate(0, -34px);
+        animation-delay: -1.6668s;
+      }
+      .obiusm-toast-spinner-bar4 {
+        transform: rotate(90deg) translate(0, -34px);
+        animation-delay: -1.5002s;
+      }
+      .obiusm-toast-spinner-bar5 {
+        transform: rotate(120deg) translate(0, -34px);
+        animation-delay: -1.3336s;
+      }
+      .obiusm-toast-spinner-bar6 {
+        transform: rotate(150deg) translate(0, -34px);
+        animation-delay: -1.167s;
+      }
+      .obiusm-toast-spinner-bar7 {
+        transform: rotate(180deg) translate(0, -34px);
+        animation-delay: -1.0004s;
+      }
+      .obiusm-toast-spinner-bar8 {
+        transform: rotate(210deg) translate(0, -34px);
+        animation-delay: -0.8338s;
+      }
+      .obiusm-toast-spinner-bar9 {
+        transform: rotate(240deg) translate(0, -34px);
+        animation-delay: -0.6672s;
+      }
+      .obiusm-toast-spinner-bar10 {
+        transform: rotate(270deg) translate(0, -34px);
+        animation-delay: -0.5006s;
+      }
+      .obiusm-toast-spinner-bar11 {
+        transform: rotate(300deg) translate(0, -34px);
+        animation-delay: -0.334s;
+      }
+      .obiusm-toast-spinner-bar12 {
+        transform: rotate(330deg) translate(0, -34px);
+        animation-delay: -0.1674s;
+      }
+    }
+    .obiusm-toast-content {
+      margin-top: 18px;
+    }
+    svg {
+      margin-top: -18px;
+    }
+  }
+
+  .obiusm-toast-success {
+    .obiusm-toast-loading();
+    padding: 0;
+    .obiusm-toast-content {
+      margin-top: -23px;
+    }
+  }
+
+  .obiusm-toast-fail {
+    .obiusm-toast-loading();
+    padding: 0;
+    .obiusm-toast-content {
+      margin-top: -23px;
+    }
+  }
+
+  #circle1 {
+    stroke: #ff4657;
+    stroke-width: 4;
+    stroke-dasharray: 251, 0;
+    stroke-dashoffset: -251;
+  }
+  .line1 {
+    stroke: #ff4657;
+    stroke-width: 4;
+    stroke-dasharray: 100 1000;
+  }
+  .line2 {
+    stroke: #ff4657;
+    stroke-width: 4;
+    stroke-dasharray: 100 1000;
+  }
+
+  #circle2 {
+    stroke: #00feff;
+    stroke-width: 4;
+  }
+  .line3 {
+    stroke: #00feff;
+    stroke-width: 4;
+    stroke-dasharray: 251, 0;
+    stroke-dashoffset: -251;
+  }
+  .line4 {
+    stroke: #00feff;
+    stroke-width: 4;
+    stroke-dasharray: 100 1000;
+  }
+}
