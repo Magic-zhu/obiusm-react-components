@@ -276,7 +276,7 @@
     },
     q3YX: function (n) {
       n.exports = JSON.parse(
-        '{"menus":{"en-US":{"/components":[{"title":"Skeleton","path":"/components/skeleton","meta":{},"children":[]},{"title":"Toast","path":"/components/toast","meta":{},"children":[]}],"*":[{"path":"/","title":"Hello obiusm-react-components!","meta":{}}]}},"locales":[{"name":"en-US","label":"English"}],"navs":{},"title":"obiusm-react-components","logo":"/obiusm-react-components/logo.png","mode":"doc","repository":{"url":"","branch":"master"},"theme":{},"exportStatic":{}}',
+        '{"menus":{"en-US":{"/components":[{"title":"Skeleton","path":"/components/skeleton","meta":{},"children":[]},{"title":"Toast","path":"/components/toast","meta":{},"children":[]}],"*":[{"path":"/","title":"Hello obiusm-react-components!","meta":{}}]}},"locales":[{"name":"en-US","label":"English"}],"navs":{"en-US":[{"path":"/components","title":"Toast"}]},"title":"obiusm-react-components","logo":"/obiusm-react-components/logo.png","mode":"site","repository":{"url":"","branch":"master"},"theme":{},"exportStatic":{}}',
       );
     },
     x2v5: function (n) {

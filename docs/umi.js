@@ -22025,7 +22025,7 @@
                 filePath: 'src/Skeleton/index.md',
                 updatedTime: 1638436807e3,
                 componentName: 'Skeleton',
-                nav: { path: '/components' },
+                nav: { path: '/components', title: 'Skeleton' },
                 slugs: [
                   { depth: 2, value: 'Skeleton', heading: 'skeleton' },
                   { depth: 3, value: '\u5c5e\u6027', heading: '\u5c5e\u6027' },
@@ -22048,7 +22048,7 @@
                 filePath: 'src/Toast/index.md',
                 updatedTime: 1638436807e3,
                 componentName: 'Toast',
-                nav: { path: '/components' },
+                nav: { path: '/components', title: 'Toast' },
                 slugs: [
                   { depth: 2, value: 'Toast', heading: 'toast' },
                   { depth: 3, value: 'API', heading: 'api' },

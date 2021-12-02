@@ -8,7 +8,7 @@ export default defineConfig({
   favicon: '/obiusm-react-components/logo.png',
   logo: '/obiusm-react-components/logo.png',
   outputPath: 'docs-dist',
-  mode: 'doc',
+  mode: 'site',
   dynamicImport: {},
   // more config: https://d.umijs.org/config
 });
