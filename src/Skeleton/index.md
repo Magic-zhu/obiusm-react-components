@@ -11,12 +11,16 @@ Demo:
 ```tsx
 import React from 'react';
 import { Skeleton } from '@obiusm/react-components';
+import './demo/demo.css';
 
 export default () => (
   <Skeleton isVisible={true}>
-    <div style={{ width: '100px', height: '100px' }}></div>
+    <div className="wrapper">
+      <div className="content1"></div>
+      <div data-skeletonIgnore={true}>123456</div>
+      <div className="content2"></div>
+      <div className="content3" data-skeletonStyle={{ width: '50%' }}></div>
+    </div>
   </Skeleton>
 );
 ```
-
-More skills for writing demo: https://d.umijs.org/guide/basic#write-component-demo
