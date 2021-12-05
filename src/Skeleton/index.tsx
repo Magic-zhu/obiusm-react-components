@@ -8,11 +8,12 @@ interface Props {
 const createModal = (child: ReactElement, depth: number, current: number) => {
   if (
     depth === current ||
-    (child.props && child.props['data-skeletonIgnore'])
+    (child && child.props && child.props['data-skeleton-ignore'])
   ) {
     return;
   }
   if (
+    child &&
     child.props &&
     child.props.children &&
     Array.isArray(child.props.children) &&
@@ -24,8 +25,8 @@ const createModal = (child: ReactElement, depth: number, current: number) => {
           child.props.className !== undefined ? child.props.className : ''
         } ${'react-skeleton'}`}
         style={
-          child.props && child.props['data-skeletonStyle']
-            ? child.props['data-skeletonStyle']
+          child.props && child.props['data-skeleton-style']
+            ? child.props['data-skeleton-style']
             : {}
         }
         key={Math.random() * 1000}
@@ -44,8 +45,8 @@ const createModal = (child: ReactElement, depth: number, current: number) => {
           child.props && child.props.className ? child.props.className : ''
         } ${'react-skeleton2'}`}
         style={
-          child.props && child.props['data-skeletonStyle']
-            ? child.props['data-skeletonStyle']
+          child.props && child.props['data-skeleton-style']
+            ? child.props['data-skeleton-style']
             : {}
         }
         key={Math.random() * 1000}
@@ -56,6 +57,9 @@ const createModal = (child: ReactElement, depth: number, current: number) => {
   }
 };
 function Skeleton(props: Props) {
+  if (!props) {
+    return <div />;
+  }
   if (props.isVisible) {
     return createModal(props.children, props.depth || 4, 0);
   } else {
