@@ -9,7 +9,7 @@ Demo:
 
 ```tsx
 import React from 'react';
-import { Skeleton } from '@obiusm/react-components';
+import { Skeleton } from 'obiusm-react-components';
 import './demo/demo.css';
 
 export default () => (

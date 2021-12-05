@@ -2,11 +2,11 @@ import { defineConfig } from 'dumi';
 
 export default defineConfig({
   title: 'obiusm-react-components',
-  base: '/obiusm-react-components/',
-  publicPath: '/obiusm-react-components/',
+  base: '/obiusm-react-components-docs/',
+  publicPath: '/obiusm-react-components-docs/',
   exportStatic: {},
-  favicon: '/obiusm-react-components/logo.png',
-  logo: '/obiusm-react-components/logo.png',
+  favicon: './logo.png',
+  logo: './logo.png',
   outputPath: 'docs-dist',
   mode: 'site',
   dynamicImport: {},

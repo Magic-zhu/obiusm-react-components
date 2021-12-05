@@ -1,6 +1,6 @@
 {
-  "private": true,
-  "name": "@obiusm/react-components",
+  "private": false,
+  "name": "obiusm-react-components",
   "version": "1.0.0",
   "scripts": {
     "start": "dumi dev",
