@@ -39,21 +39,25 @@ const createModal = (child: ReactElement, depth: number, current: number) => {
       </div>
     );
   } else {
-    return (
-      <div
-        className={`${
-          child.props && child.props.className ? child.props.className : ''
-        } ${'react-skeleton2'}`}
-        style={
-          child.props && child.props['data-skeleton-style']
-            ? child.props['data-skeleton-style']
-            : {}
-        }
-        key={Math.random() * 1000}
-      >
-        *
-      </div>
-    );
+    if (child) {
+      return (
+        <div
+          className={`${
+            child.props && child.props.className ? child.props.className : ''
+          } ${'react-skeleton2'}`}
+          style={
+            child.props && child.props['data-skeleton-style']
+              ? child.props['data-skeleton-style']
+              : {}
+          }
+          key={Math.random() * 1000}
+        >
+          *
+        </div>
+      );
+    } else {
+      return null;
+    }
   }
 };
 function Skeleton(props: Props) {
