@@ -1,9 +1,9 @@
 {
   "private": false,
   "name": "obiusm-react-components",
-  "version": "1.0.01",
+  "version": "1.0.11",
   "scripts": {
-    "start": "dumi dev SENV=development",
+    "start": "dumi dev",
     "docs:build": "dumi build",
     "docs:deploy": "gh-pages -d dists",
     "build": "father-build",

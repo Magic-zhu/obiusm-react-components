@@ -16,9 +16,7 @@ export default () => {
   function handleClick(type: string) {
     const actionMap = {
       loading: () => {
-        Toast.loading('哈哈哈', 3, () => {
-          Toast.info('触发关闭', 1);
-        });
+        Toast.loading('哈哈哈', -1, () => {}, false);
       },
       info: () => {
         Toast.info('测试数据...');
@@ -30,15 +28,12 @@ export default () => {
         Toast.fail();
       },
       hide: () => {
-        Toast.loading('手动关闭');
-        setTimeout(() => {
-          Toast.hide();
-          Toast.success();
-        }, 2000);
+        Toast.hide();
       },
     };
     actionMap[type]();
   }
+
   return (
     <div>
       <div
@@ -88,11 +83,11 @@ export default () => {
 
 ### API
 
-- Toast.success(content, duration, onClose)
-- Toast.fail(content, duration, onClose)
-- Toast.info(content, duration, onClose)
-- Toast.loading(content, duration, onClose)
-- Toast.hide(content, duration, onClose)
+- Toast.success(content, duration, onClose, mask)
+- Toast.fail(content, duration, onClose, mask)
+- Toast.info(content, duration, onClose, mask)
+- Toast.loading(content, duration, onClose, mask)
+- Toast.hide(content, duration, onClose, mask)
 
 ### 属性
 
@@ -101,3 +96,4 @@ export default () => {
 | content  | 提示内容               | String   | 无     |
 | duration | 自动关闭的延时，单位秒 | number   | 3      |
 | onClose  | 关闭后回调             | Function | 无     |
+| mask     | 是否启用遮罩           | Boolean  | true   |

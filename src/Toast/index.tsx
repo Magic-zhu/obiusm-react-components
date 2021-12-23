@@ -71,17 +71,10 @@ const Fail: any = (props: Info) => {
 };
 
 const Wrapper: any = (props: any) => {
-  const stop = (e: TouchEvent) => {
-    if (props.mask) {
-      e.stopPropagation();
-    }
-  };
   return (
     <div
       className="obiusm-toast-wrapper"
-      onClick={(e: any) => {
-        stop(e);
-      }}
+      style={props.mask ? {} : { pointerEvents: 'none' }}
     >
       {props.children}
     </div>
@@ -90,7 +83,6 @@ const Wrapper: any = (props: any) => {
 
 class Toast {
   instance: null | HTMLElement = null;
-
   info(
     content: string,
     duration: number = 3,
@@ -104,7 +96,7 @@ class Toast {
     });
     setTimeout(() => {
       this.deleteInstance();
-      onClose && onClose();
+      this.instance && onClose && onClose();
     }, duration * 1000);
   }
 
@@ -121,7 +113,7 @@ class Toast {
     });
     setTimeout(() => {
       this.deleteInstance();
-      onClose && onClose();
+      this.instance && onClose && onClose();
     }, duration * 1000);
   }
 
@@ -138,7 +130,7 @@ class Toast {
     });
     setTimeout(() => {
       this.deleteInstance();
-      onClose && onClose();
+      this.instance && onClose && onClose();
     }, duration * 1000);
   }
 
@@ -156,7 +148,7 @@ class Toast {
     if (duration === -1) return;
     setTimeout(() => {
       this.deleteInstance();
-      onClose && onClose();
+      this.instance && onClose && onClose();
     }, duration * 1000);
   }
 
